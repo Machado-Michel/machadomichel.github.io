@@ -97,6 +97,10 @@ main {
     width: 70vw;
 }
 
+main > section {
+    margin: 1.5rem;
+}
+
 main > h1 {
     text-align: center;
     text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.400);
@@ -113,19 +117,58 @@ main > h1 {
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.459);
     border-radius: 20px;
     margin: 1.5rem;
-    padding: 2rem;
     border: 2px solid var(--Preto);
 }
 
-article > p {
+section > p {
     color: var(--Preto);
     font-size: 19px;
     text-indent: 1rem;
     text-align: justify;
-    padding: 0.2rem 1.5rem;
+    padding: 1rem 1.5rem;
 }
 
-@media (max-width: 768px) {
+section.sobre {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 5rem 20px;
+}
+
+.conteudo-direita, .conteudo-direita {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-right {
+    height: 150px;
+    justify-content: center;
+    max-width: 85%;
+}
+
+.conteudo-centro {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    cursor: pointer;
+    display: block;
+}
+
+.perfil-img {
+  background: rgba(0, 0, 0, 0.349);
+  border-radius: 4rem;
+  display: flex;
+  -webkit-filter: grayscale(100);
+  filter: grayscale(100);
+  max-width: 80%;
+  padding: 10px;
+  transition: all .4s;
+}
+
+@media (max-width: 845px) {
     .nav-list {
         position: absolute;
         top: 8vh;
@@ -200,15 +243,15 @@ article > p {
         background: var(--Branco);
         box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.459);
         border-radius: 20px;
-        margin: .5rem;
-        padding: .3rem;
+        margin: 1rem;
         border: 2px solid var(--Preto);
     }
 
-    article > p {
+    section > p {
         color: var(--Preto);
         font-size: 14px;
         text-align: justify;
+        padding: .7rem 0.7rem;
     }
 }
 
