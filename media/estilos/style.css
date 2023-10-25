@@ -3,8 +3,22 @@
     padding: 0;
 }
 
+:root {
+    --Branco: #fff;
+    --Preto: #000;
+    --Branco-Main: rgba(255, 255, 255, 0.966);
+    --cor-Principal: #E0E0E0;
+    --cor-Secundaria: #3f3f3f;
+    --cor-Tercearia: #B8B8B8;
+    --cor-Quartearia: #8F8F8F;
+    --cor-Quintearia: #666666;
+}
+
 body {
     overflow-x: hidden;
+    background-color: var(--cor-Quintearia);
+    background: url(../imagens/pexels-manuel-schlichter-18765488.jpg) no-repeat center center;
+    background-size: cover;
 }
 
 nav {
@@ -12,8 +26,9 @@ nav {
     justify-content: space-around;
     align-items: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: black;
-    height: 8vh;
+    background-color: var(--cor-Secundaria);
+    height: 10vh;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.400);
 }
 
 .nav-list {
@@ -27,13 +42,29 @@ nav {
 }
 
 .nav-list a {
-    color: #fff;
+    color: var(--Branco);
     text-decoration: none;
+    padding: 0px 30px 10px 0px;
+    position: relative;
     transition: .3s;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.400);
 }
 
-.nav-list a:hover {
+.nav-list a::after {
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: var(--cor-Principal);
+    position: absolute;
+    bottom: 0;
+    left: 0;
     opacity: 0.7;
+    transition: .5s ease-in-out;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.400);
+}
+
+.nav-list a:hover::after {
+    width: 85%;
 }
 
 .logo {
@@ -41,7 +72,8 @@ nav {
     text-transform: uppercase;
     letter-spacing: 4px;
     text-decoration: none;
-    color: #fff;
+    color: var(--Branco);
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.400);
 }
 
 .mobile-menu {
@@ -52,15 +84,45 @@ nav {
 .mobile-menu div {
     width: 32px;
     height: 2px;
-    background: #fff;
+    background: var(--Branco);
     margin: 8px;
     transition: .3s;
 }
 
 main {
-    background: url(../imagens/pexels-manuel-schlichter-18765488.jpg) no-repeat center center;
+    margin: 0 auto;
+    background-color: var(--Branco-Main);
     background-size: cover;
-    height: 92vh;
+    height: 90vh;
+    width: 70vw;
+}
+
+main > h1 {
+    text-align: center;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.400);
+    color: var(--cor-Secundaria);
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    padding-top: 8.5rem;
+    margin-bottom: 6rem;
+}
+
+.biografia {
+    background: var(--Branco);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.459);
+    border-radius: 20px;
+    margin: 1.5rem;
+    padding: 2rem;
+    border: 2px solid var(--Preto);
+}
+
+article > p {
+    color: var(--Preto);
+    font-size: 19px;
+    text-indent: 1rem;
+    text-align: justify;
+    padding: 0.2rem 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -68,14 +130,29 @@ main {
         position: absolute;
         top: 8vh;
         right: 0;
-        width: 35vw;
+        width: 45vw;
         height: 92vh;
-        background: black;
+        background: var(--cor-Secundaria);
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         transform: translateX(100%);
         transition: transform .3s ease-in;
+    }
+
+    .nav-list a::after{
+        content: " ";
+        width: 0%;
+        height: 4px;
+        background-color: var(--cor-Principal);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: .5s ease-in-out;
+    }
+
+    .nav-list a:hover::after {
+        width: 85%;
     }
 
     .nav-list li {
