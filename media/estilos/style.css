@@ -167,6 +167,49 @@ article > p {
     .nav-list.active {
         transform: translateX(0);
     }
+
+    .logo {
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: var(--Branco);
+        text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.400);
+    }
+
+    main {
+        margin: 0 auto;
+        background-color: var(--Branco-Main);
+        background-size: cover;
+        height: 90vh;
+        width: 90vw;
+    }
+
+    main > h1 {
+        text-align: center;
+        text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.400);
+        color: var(--cor-Secundaria);
+        font-size: 3rem;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+        padding-top: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .biografia {
+        background: var(--Branco);
+        box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.459);
+        border-radius: 20px;
+        margin: .5rem;
+        padding: .3rem;
+        border: 2px solid var(--Preto);
+    }
+
+    article > p {
+        color: var(--Preto);
+        font-size: 14px;
+        text-align: justify;
+    }
 }
 
 @keyframes navLinkFade {
