@@ -93,7 +93,7 @@ main {
     margin: 0 auto;
     background-color: var(--Branco-Main);
     background-size: cover;
-    height: 90vh;
+    /*height: 90vh; -------- */
     width: 70vw;
 }
 
@@ -133,7 +133,7 @@ section.sobre {
     display: flex;
     gap: 20px;
     justify-content: space-around;
-    padding: 5rem 20px;
+    padding: 1rem 20px;
 }
 
 .conteudo-direita, .conteudo-direita {
@@ -152,6 +152,17 @@ section.sobre {
     justify-content: center;
 }
 
+.conteudo-esquerdo, .conteudo-esquerdo {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-left {
+    height: 150px;
+    justify-content: center;
+    max-width: 85%;
+}
+
 img {
     cursor: pointer;
     display: block;
@@ -163,9 +174,53 @@ img {
   display: flex;
   -webkit-filter: grayscale(100);
   filter: grayscale(100);
-  max-width: 80%;
+  max-width: 70%;
   padding: 10px;
   transition: all .4s;
+}
+
+.skill-camp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+span {
+    color: #aaa;
+    cursor: default;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.txt{
+    width: 30rem;
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+}
+
+.skill-box{
+    display: flex;
+    background: rgba(170, 170, 170,0.1);
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.skill-box:hover{
+    background: rgba(170, 170, 170,0.3);
+}
+
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
 }
 
 @media (max-width: 845px) {
